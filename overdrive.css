@@ -1,0 +1,326 @@
+/*
+ * overdrive.css
+ * Copyright (C) 2016  L. Bradley LaBoon <me@bradleylaboon.com>
+ *
+ * This file is part of Overdrive.
+ *
+ * Overdrive is free software: you can redistribute it and/or modify it under
+ * the terms terms of the GNU General Public License as published by the Free
+ * Software Foundation, either verion 3 of the License, or (at your option) any
+ * later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+@font-face {
+	font-family: 'Armata';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Armata'), local('Armata-Regular'), url(https://themes.googleusercontent.com/static/fonts/armata/v3/FG9R9aX-RIX_AvJI8USOWg.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Open Sans'), local('OpenSans'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+#overdrive {
+	background-attachment: fixed;
+	background-color: #314663;
+	background-image: -webkit-linear-gradient(top, #000000 0%, #314663 100%);
+	background-image: linear-gradient(to bottom, #000000 0%, #314663 100%);
+	background-repeat: no-repeat;
+	color: #FFF;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	margin: 0;
+	overflow: hidden;
+}
+
+.overdrive-control {
+	cursor: pointer;
+}
+
+.overdrive-fail-string {
+	color: #F00;
+}
+
+.overdrive-file-column-wanted {
+	text-align: center;
+}
+
+#overdrive-file-list-header {
+	background-color: #426187;
+	border: 1px solid #FFF;
+}
+
+#overdrive-file-list-header div {
+	border-right: 1px solid #FFF;
+}
+
+.overdrive-folder-string {
+	color: #FF0;
+}
+
+#overdrive-header {
+	display: inline-block;
+	width: 100%;
+}
+
+#overdrive-header-branding {
+	float: right;
+	padding: 8px 8px 0px 0px;
+}
+
+#overdrive-header-branding-name {
+	font-family: 'Armata', sans-serif;
+	font-size: 24px;
+	text-align: right;
+}
+
+#overdrive-header-branding-desc {
+	font-size: 18px;
+	text-align: right;
+}
+
+#overdrive-header-buttons {
+	float: left;
+	padding: 8px 0px 0px 8px;
+}
+
+.overdrive-header-column {
+	cursor: default;
+}
+
+#overdrive-peer-list-header {
+	background-color: #426187;
+	border: 1px solid #FFF;
+}
+
+#overdrive-peer-list-header div {
+	border-right: 1px solid #FFF;
+}
+
+#overdrive-progress-detail {
+	background-color: #28445C;
+	border-radius: 10px;
+	color: #4573A5;
+	height: 30px;
+	width: 100%;
+}
+
+.overdrive-side-label {
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-left: 8px;
+}
+
+#overdrive-split {
+	border-top: 2px solid #3B4F6A;
+	height: 300px;
+	overflow: hidden;
+	width: 100%;
+}
+
+#overdrive-split-main {
+	height: 100%;
+	overflow: hidden;
+}
+
+#overdrive-split-separator {
+	background-color: #3B4F6A;
+	cursor: ew-resize;
+	float: left;
+	height: 100%;
+	width: 3px;
+}
+
+#overdrive-split-separator:hover {
+	background-color: #2A3E59;
+}
+
+#overdrive-split-side {
+	float: left;
+	width: 200px;
+}
+
+.overdrive-state {
+	cursor: pointer;
+}
+
+.overdrive-state-active {
+	cursor: auto;
+	font-weight: bold;
+}
+
+#overdrive-state-list {
+	margin-left: 16px;
+}
+
+#overdrive-status-table {
+	display: block;
+	overflow-y: auto;
+	width: 100%;
+}
+
+#overdrive-status-table tbody tr td {
+	vertical-align: top;
+}
+
+#overdrive-status-table tbody tr td table tbody tr td {
+	vertical-align: middle;
+}
+
+#overdrive-status-table tbody tr td table tbody tr td:first-of-type {
+	font-weight: bold;
+}
+
+.overdrive-success-string {
+	color: #0F0;
+}
+
+.overdrive-tab {
+	background-color: #37506F;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	cursor: default;
+	display: inline-block;
+	padding: 5px;
+}
+
+.overdrive-tab-active {
+	background-color: #426187;
+}
+
+#overdrive-tab-contents {
+	background-color: #426187;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	margin-bottom: 8px;
+	padding: 10px;
+}
+
+.overdrive-table {
+	overflow: auto;
+	position: relative;
+}
+
+.overdrive-table-body {
+	display: inline-block;
+}
+
+.overdrive-table-entry {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.overdrive-table-entry div {
+	display: inline-block;
+	padding: 0px 6px 0px 5px;
+	text-overflow: ellipsis;
+}
+
+.overdrive-table-header {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	white-space: nowrap;
+}
+
+.overdrive-table-header div {
+	display: inline-block;
+	font-weight: bold;
+	padding: 0px 5px;
+	text-align: center;
+}
+
+.overdrive-torrent {
+	border-radius: 5px;
+	cursor: default;
+}
+
+#overdrive-torrent-detail {
+	padding: 8px 8px 0px 8px;
+}
+
+#overdrive-torrent-list {
+	border: 1px solid #3B4F6A;
+	height: 288px;
+	margin: 5px 10px;
+}
+
+#overdrive-torrent-list-header {
+	background-attachment: fixed;
+	background-color: #314663;
+	background-image: -webkit-linear-gradient(top, #000000 0%, #314663 100%);
+	background-image: -moz-linear-gradient(top, #000000 0%, #314663 100%);
+	background-repeat: no-repeat;
+	border: 1px solid #3B4F6A;
+}
+
+#overdrive-torrent-list-header div {
+	border-right: 1px solid #3B4F6A;
+}
+
+.overdrive-torrent-selected {
+	background-color: red;
+}
+
+#overdrive-vert-separator {
+	background-color: #3B4F6A;
+	cursor: ns-resize;
+	height: 3px;
+}
+
+#overdrive-vert-separator:hover {
+	background-color: #2A3E59;
+}
+
+.overdrive-window-close {
+	cursor: pointer;
+	float: right;
+}
+
+.overdrive-window {
+	background-attachment: fixed;
+	background-color: #314663;
+	background-image: -webkit-linear-gradient(top, #000000 0%, #314663 100%);
+	background-image: -moz-linear-gradient(top, #000000 0%, #314663 100%);
+	background-repeat: no-repeat;
+	border: 1px solid #3B4F6A;
+	left: 0px;
+	opacity: 0.0;
+	position: fixed;
+	top: 0px;
+	white-space: nowrap;
+}
+
+.overdrive-window-close {
+	margin-right: 2px;
+}
+
+.overdrive-window-contents {
+	padding: 5px;
+}
+
+.overdrive-window-title {
+	cursor: default;
+	float: left;
+	font-weight: bold;
+	margin-left: 2px;
+}
+
+.overdrive-window-titlebar {
+	border-bottom: 1px solid #3B4F6A;
+	display: inline-block;
+	width: 100%;
+}

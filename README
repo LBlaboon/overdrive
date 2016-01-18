@@ -1,0 +1,71 @@
+About Overdrive
+===============
+
+Overdrive is an alternative web interface for the Transmission torrent program.
+There are a number of issues that I have with the web interface that comes with
+Transmission (some more subjective than others), so I decided to make my own.
+
+Currently the interface is incomplete, but it works for basic usage. Currently
+implemented features include the ability to add torrents by URL, sorting by any
+column, filtering by status, performing operations on multiple torrents, and
+choosing which files to download.
+
+Overdrive is written entirely using standard HTML/CSS/Javascript, and will work
+in any standards-compliant browser (essentially any modern browser). There are
+no special cases made to ensure functionality within a specific browser.
+Chromium and Firefox are used to test functionality. There are no Linux
+versions of Safari or IE/Edge (or whatever MS is calling their browser these
+days), so I am unable to test those. Opera uses the same rendering engine as
+Chromium, so testing it would be redundant.
+
+I am currently focusing my efforts on rewriting the interface from scratch.
+The current iteration (though stable and working) is starting to get stale. The
+last update was made years before I made this repository. The only reason I
+even published this version is for historical purposes. There is no ETA for the
+new version, so don't ask.
+
+
+Requirements
+============
+
+Overdrive should work with the latest version of any browser.
+
+
+Installation
+============
+
+The files in this repository need to be installed in one of several locations
+in order for Transmission to use it (instead of the built-in interface). You
+can pick one of the following locations:
+
+$HOME/.local/share/transmission/web (where $HOME is the home directory of the
+user Transmission is running as)
+
+/usr/local/share/transmission/web
+
+/usr/share/transmission/web (this is the location of the default interface)
+
+Transmission will search the directories in the order in which they are listed
+above. Thus, it will fallback to the default interface only if none of the
+other locations exist.
+
+
+How to report bugs?
+===================
+
+Bugs should be reported to L. Bradley LaBoon <me@bradleylaboon.com>.
+
+Since I am currently working on re-writing the interface (as mentioned above),
+I will probably not update the existing code. However, the fix will be included
+in the new version (if applicable).
+
+
+Credits
+=======
+
+The icons used at the top of the interface are part of the "Button Icons" set
+created by Hopstarter. They are available at the following URL:
+<http://www.iconarchive.com/show/button-icons-by-hopstarter.html>
+
+The "B" Logo is Copyright (C) L. Bradley LaBoon, and will eventually be
+replaced with a project-specific logo.

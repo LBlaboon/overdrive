@@ -1,0 +1,112 @@
+<!--
+	index.html
+	Copyright (C) 2016  L. Bradley LaBoon <me@bradleylaboon.com>
+	
+	This file is part of Overdrive.
+	
+	Overdrive is free software: you can redistribute it and/or modify it
+	under the terms of the GNU General Public License as published by the
+	Free Software Foundation, either version 3 of the License, or (at your
+	option) any later version.
+	
+	This program is distributed in the hope that it will be useful, but
+	WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+	General Public License for more details.
+	
+	You should have received a copy of the GNU General Public License along
+	with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Overdrive Web Interface</title>
+		<link rel="shortcut icon" type="image/x-icon" href="" />
+		<link rel="stylesheet" type="text/css" href="overdrive.css" />
+		<script type="text/javascript" src="overdrive.js"></script>
+	</head>
+	<body id="overdrive">
+		<div id="overdrive-header">
+			<div id="overdrive-header-buttons">
+				<img id="overdrive-header-logo" src="img/logo.png" alt="Overdrive" />
+				<img id="overdrive-add-button" class="overdrive-control" src="img/add.png" alt="Add Torrent" />
+				<img id="overdrive-pause-button" class="overdrive-control" src="img/pause-disabled.png" alt="Pause" />
+				<img id="overdrive-resume-button" class="overdrive-control" src="img/resume-disabled.png" alt="Resume" />
+				<img id="overdrive-delete-button" class="overdrive-control" src="img/delete-disabled.png" alt="Delete" />
+				<img id="overdrive-alt-button" class="overdrive-control" src="img/alt-disabled.png" alt="Alt Speed" />
+			</div>
+			<div id="overdrive-header-branding">
+				<div id="overdrive-header-branding-name">Transmission</div>
+				<div id="overdrive-header-branding-desc">Overdrive UI</div>
+			</div>
+		</div>
+		<div id="overdrive-split">
+			<div id="overdrive-split-side">
+				<div class="overdrive-side-label">State</div>
+				<div id="overdrive-state-list">
+					<div id="overdrive-state-all" class="overdrive-state overdrive-state-active">All (0)</div>
+					<div id="overdrive-state-downloading" class="overdrive-state">Downloading (0)</div>
+					<div id="overdrive-state-seeding" class="overdrive-state">Seeding (0)</div>
+					<div id="overdrive-state-active" class="overdrive-state">Active (0)</div>
+					<div id="overdrive-state-paused" class="overdrive-state">Paused (0)</div>
+				</div>
+			</div>
+			<div id="overdrive-split-separator"></div>
+			<div id="overdrive-split-main">
+				<div id="overdrive-torrent-list" class="overdrive-table">
+					<div id="overdrive-torrent-list-header" class="overdrive-table-header"><div>Loading...</div></div>
+					<div id="overdrive-torrent-list-body" class="overdrive-table-body"></div>
+				</div>
+			</div>
+		</div>
+		<div id="overdrive-vert-separator"></div>
+		<div id="overdrive-torrent-detail">
+			<div id="overdrive-tab-bar">
+				<div id="overdrive-status-tab" class="overdrive-tab overdrive-tab-active">Status</div>
+				<div id="overdrive-files-tab" class="overdrive-tab">Files</div>
+				<div id="overdrive-peers-tab" class="overdrive-tab">Peers</div>
+				<div id="overdrive-options-tab" class="overdrive-tab">Options</div>
+				<div id="overdrive-graph-tab" class="overdrive-tab">Graph</div>
+			</div>
+			<div id="overdrive-tab-contents">
+				<canvas id="overdrive-progress-detail"></canvas>
+				<table id="overdrive-status-table"></table>
+			</div>
+		</div>
+		<div id="overdrive-add-window" class="overdrive-window">
+			<div class="overdrive-window-titlebar">
+				<div class="overdrive-window-title">Add A Torrent</div>
+				<img class="overdrive-window-close" src="img/close.png" alt="Close" />
+			</div>
+			<div id="overdrive-add-menu" class="overdrive-window-contents">
+				<form id="overdrive-add-form">
+					Please select a torrent file to upload:<br />
+					<input id="overdrive-add-file" type="file" /><br />
+					<br />
+					Or enter a URL:<br />
+					<input id="overdrive-add-url" type="text" /><br />
+					<input id="overdrive-add-started" type="checkbox" checked />
+					<label for="overdrive-add-started">Start when added</label><br />
+					<input id="overdrive-add-cancel" type="button" value="Cancel" />
+					<input id="overdrive-add-upload" type="button" value="Upload" />
+				</form>
+			</div>
+		</div>
+		<div id="overdrive-delete-window" class="overdrive-window">
+			<div class="overdrive-window-titlebar">
+				<div class="overdrive-window-title">Delete Torrent(s)</div>
+				<img class="overdrive-window-close" src="img/close.png" alt="Close" />
+			</div>
+			<div id="overdrive-delete-menu" class="overdrive-window-contents">
+				<form id="overdrive-delete-form">
+					<input id="overdrive-delete-data" type="checkbox" checked />
+					<label for="overdrive-delete-data">Delete Data</label><br />
+					<input id="overdrive-delete-cancel" type="button" value="Cancel" />
+					<input id="overdrive-delete-confirm" type="button" value="Delete" />
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
